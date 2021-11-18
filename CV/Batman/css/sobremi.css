@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.sobremi__menuBar{
+    background-color: #c4c4c4;
+    padding: 10px 0;
+}
+
+.sobremi__menuBar ul{
+   margin-left: 20px;
+}
+
+.sobremi__section{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.sobremi__section img{
+    margin: 0 30px;
+
+}
+footer {
+    background-color: #005677;
+    color: #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }

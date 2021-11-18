@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+header {
+  width: 100%;
+}
+
+.barra-descuentos {
+  background-color: #1cd1b0;
+  padding: 10px 26px;
+}
+
+.barra-descuentos p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.titulo {
+  background: #00669f;
+  padding: 28px 0px 26px 28px;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.boton-mas-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00669f;
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.cartas {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin: 44px;
+}
+
+.tarjeta-heroe {
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 300px;
+  border-radius: 15px;
+  margin: 20px 40px;
+}
+
+.tarjeta-heroe > img {
+  display: block;
+  width: 100%;
+}
+
+.perfil {
+  border-radius: 50%;
+  position: absolute;
+}
+
+img.perfil {
+  width: 42%;
+  left: 28%;
+  top: 22%;
+}
+
+.portada {
+  margin: 0;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.like {
+  position: absolute;
+  color: red;
+  top: 15px;
+  font-size: 20px;
+  left: 25px;
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.info-heroe {
+  background: #f3f3f3;
+  padding: 90px 16px 18px 17px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-heroe > p {
+  margin-bottom: 20px;
+  padding: 5px 15px;
+}
+
+.boton-mas {
+  width: 128px;
+  background-color: #00669f;
+  color: white;
+  border: solid 1px #00669f;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  height: 51px;
+  color: white;
+  background-color: #00669f;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+footer > img {
+  position: absolute;
+  width: 100px;
+  right: 10px;
+}
+
+/* Para tabletas */
+@media ((max-width: 780px)) {
+  .tarjeta-heroe {
+    margin: 15px 0px;
+  }
+
+  img.perfil {
+    width: 50%;
+    left: 29%;
+    top: 10%;
+  }
+}
+
+/* Para celulares grandes */
+@media (max-width: 600px) {
+  .tarjeta-heroe {
+    margin: 25px 0px;
+    width: 100%;
+  }
+
+  img.perfil {
+    width: 45%;
+    left: 29%;
+    top: 26%;
+  }
+
+  .info-heroe {
+    padding-top: 100px;
+  }
+
+  .harley {
+    display: none;
+  }
+}
+
+/* Para celulares pequeños */
+@media (max-width: 480px) {
+  .tarjeta-heroe {
+    margin: 25px 0px;
+    width: 100%;
+  }
+
+  img.perfil {
+    width: 45%;
+    left: 29%;
+    top: 18%;
+  }
+  .boton-mas-principal {
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    font-size: 1.2rem;
+  }
+
+  footer > img {
+    position: static;
+    margin: 10px;
+  }
+  
+}
+
+/* Para celulares super pequeños */
+@media (max-width: 300px) {
+  .tarjeta-heroe {
+    margin: 25px 0px;
+    width: 100%;
+  }
+
+  .info-heroe {
+    padding-top: 70px;
+  }
+
+  img.perfil {
+    width: 45%;
+    left: 29%;
+    top: 10%;
+  }
+}
