@@ -17,34 +17,54 @@ p {
   color: black;
 }
 
-button{
+button {
   cursor: pointer;
 }
+
 /* Barra de idiomas */
 .barra-idiomas {
   background-color: black;
   padding: 8px 15px 7px 90px;
   font-weight: 400;
-}
-
-.barra-idiomas li,
-.barra-idiomas ul,
-.barra-idiomas p {
-  display: inline;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fbfaf6;
   font-size: 13px;
 }
 
 .barra-idiomas ul {
+  display: flex;
+  align-items: center;
+}
+
+.barra-idiomas p {
+  text-align: center;
+  color: white;
+}
+
+/* .barra-idiomas ul {
   position: absolute;
   right: 0;
-}
+} */
 
 /* Barra menu principal */
 .menu-principal {
   background-color: #f0a83e;
   padding: 12px;
   display: flex;
+  justify-content: space-between;
+}
+.menu-opciones {
+  display: flex;
+}
+
+.menu-toggle {
+  margin: 0 10px;
+  display: none;
+  font-size: 20px;
+  color: #fbfaf6;
+  font-weight: bold;
 }
 
 .menu-principal img {
@@ -52,7 +72,7 @@ button{
 }
 
 nav.menu-principal a,
-li {
+header li {
   display: inline;
   margin-right: 10px;
   color: white;
@@ -65,10 +85,10 @@ li {
   vertical-align: middle;
 }
 
-nav.menu-principal ul {
+/* nav.menu-principal ul {
   position: absolute;
   right: 0px;
-}
+} */
 
 /* Banner */
 .banner {
@@ -112,7 +132,7 @@ nav.menu-principal ul {
 
 /* Productos destacados */
 .img-patita {
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 h1 {
@@ -136,6 +156,12 @@ h1 {
   color: #666666;
 }
 
+.lista-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 .lista-productos p {
   color: #3c2313;
   font-weight: 600;
@@ -145,9 +171,9 @@ h1 {
 }
 
 .lista-productos li {
-  display: inline-block;
   background-color: #fbfaf6;
   margin-bottom: 20px;
+  margin: 0 10px 20px 10px;
 }
 
 .lista-productos p.precio {
@@ -173,6 +199,11 @@ h2 {
   margin: 25px 0;
 }
 
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .input-formulario {
   color: white;
   font-size: 9px;
@@ -181,6 +212,7 @@ h2 {
   padding: 12px 10px;
   border-radius: 10px;
   margin-bottom: 7px;
+  border: none;
 }
 
 .seccion-contacto button {
@@ -191,7 +223,7 @@ h2 {
 }
 
 .botones-contacto {
-  margin: 40px auto;
+  margin: 30px 0px;
 }
 
 .boton-resetear {
@@ -221,7 +253,7 @@ h2 {
 
 .suscribete img {
   width: 45px;
-  margin: 0  15px 0 23px;
+  margin: 0 15px 0 23px;
 }
 .suscribete h2 {
   color: white;
@@ -234,6 +266,7 @@ h2 {
   border-radius: 15px;
   color: lightgrey;
   font-size: 10px;
+  border: none;
 }
 
 .boton-suscripcion {
@@ -270,6 +303,7 @@ h2 {
 .footer-info article {
   display: flex;
   align-items: center;
+  margin: 10px 0;
 }
 
 .footer-info article div {
@@ -280,4 +314,106 @@ h2 {
   background: #222222;
   color: white;
   padding: 5px;
+}
+
+/* Tablets */
+@media (max-width: 1000px) {
+  .menu-toggle {
+    display: inline;
+    justify-self: flex-end;
+  }
+  .menu-principal ul {
+    display: none;
+  }
+  .suscribete {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .suscribete form {
+    margin: 10px 0px 20px 0px;
+  }
+
+  .boton-suscripcion {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .form-instruccion {
+    font-size: 13px;
+  }
+}
+
+
+/* Celulares */
+@media (max-width: 580px) {
+  .barra-idiomas {
+    margin: 0;
+    padding: 10px;
+  }
+  .banner {
+    height: 300px;
+  }
+
+
+  .mensaje-1 {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .input-formulario {
+    width: 90%;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+
+  .botones-contacto {
+    display: flex;
+  }
+  .suscribete div {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* El div que pertenezca a suscribete que sea el primer hijo*/
+  .suscribete div:nth-child(1) {
+    margin-top: 25px;
+  }
+
+  .suscribete form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .boton-suscripcion,
+  .form-instruccion {
+    width: 95%;
+    margin: 10px 0px;
+    box-sizing: border-box;
+  }
+  .form-instruccion {
+    padding: 15px;
+  }
+
+  .seccion-contacto {
+    width: 85%;
+  }
+  .footer-info {
+    flex-direction: column-reverse;
+    /* arriba  derecha  abajo izquierda*/
+    padding: 0px 0px 25px 20px;
+  }
+
+  .footer-info > img {
+    margin: 25px 0px;
+  }
 }

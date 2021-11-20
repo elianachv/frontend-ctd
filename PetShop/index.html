@@ -36,20 +36,25 @@
             />
           </a>
         </div>
-        <ul type="none">
-          <li>
-            <a href="#"><img src="img/icons/icono_patita2.png" />Comederos</a>
-          </li>
-          <li>
-            <a href="#"><img src="img/icons/icono_patita2.png" />Pets</a>
-          </li>
-          <li>
-            <a href="#"><img src="img/icons/icono_patita2.png" />Nosotros</a>
-          </li>
-          <li>
-            <a href="#"><img src="img/icons/icono_patita2.png" />Contactanos</a>
-          </li>
-        </ul>
+
+        <div class="menu-opciones">
+          <span class="menu-toggle">&#9776</span>
+          <ul type="none">
+            <li>
+              <a href="#"><img src="img/icons/icono_patita2.png" />Comederos</a>
+            </li>
+            <li>
+              <a href="#"><img src="img/icons/icono_patita2.png" />Pets</a>
+            </li>
+            <li>
+              <a href="#"><img src="img/icons/icono_patita2.png" />Nosotros</a>
+            </li>
+            <li>
+              <a href="#"><img src="img/icons/icono_patita2.png" />Contactanos</a>
+            </li>
+          </ul>
+        </div>
+       
       </nav>
     </header>
 
@@ -112,13 +117,18 @@
       <!-- Sección contactanos -->
       <section class="seccion-contacto">
         <h2>Contáctanos</h2>
-        <p class="input-formulario">Nombre y apellido</p>
-        <p class="input-formulario">Ingresa correo electrónico</p>
-        <p class="input-formulario">Teléfono</p>
-        <div class="botones-contacto">
-          <button class="boton-resetear">Resetar</button>
-          <button class="boton-enviar">Enviar</button>
-        </div>
+
+        <form class="formulario contacto">
+          <input type="text" class="input-formulario" name="nombre" placeholder="Nombre y apellido" required>
+          <input type="email" class="input-formulario" name="nombre" placeholder="Ingresa correo electrónico" required>
+          <input type="tel" class="input-formulario" name="nombre" placeholder="Teléfono">
+          <div class="botones-contacto">
+            <button type="reset" class="boton-resetear">Resetar</button>
+            <button type ="submit" class="boton-enviar">Enviar</button>
+          </div>
+        </form>
+
+      
       </section>
     </main>
 
@@ -131,8 +141,10 @@
         </div>
 
         <div>
-          <p class="form-instruccion">Ingresa tu correo electrónico</p>
-          <button class="boton-suscripcion">Suscribirme</button>
+          <form class="formulario suscripcion">
+            <input  type="email" class="form-instruccion" placeholder="Ingresa tu correo electrónico" required>
+            <button type="submit" class="boton-suscripcion">Suscribirme</button>
+          </form>
         </div>
       </section>
 
