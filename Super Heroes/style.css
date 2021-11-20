@@ -56,14 +56,14 @@ h1 {
   align-items: center;
   height: fit-content;
   margin: 44px;
+  height: 100vh;
 }
 
 .tarjeta-heroe {
-  /* display: inline-block; */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
   width: 300px;
   border-radius: 15px;
@@ -136,7 +136,6 @@ footer {
   align-items: center;
   margin: auto;
   width: 100%;
-  height: 51px;
   color: white;
   background-color: #00669f;
   padding: 8px;
@@ -149,27 +148,17 @@ footer > img {
   right: 10px;
 }
 
-/* Para tabletas */
-@media ((max-width: 780px)) {
+/**/
+@media (max-width: 1650px) {
+  .cartas {
+    height: auto;
+  }
   .tarjeta-heroe {
-    margin: 15px 0px;
+    margin: 25px 30px;
+    width: 30%;
   }
 
-  img.perfil {
-    width: 50%;
-    left: 29%;
-    top: 10%;
-  }
-}
-
-/* Para celulares grandes */
-@media (max-width: 600px) {
-  .tarjeta-heroe {
-    margin: 25px 0px;
-    width: 100%;
-  }
-
-  img.perfil {
+  /* img.perfil {
     width: 45%;
     left: 29%;
     top: 26%;
@@ -181,6 +170,76 @@ footer > img {
 
   .harley {
     display: none;
+  } */
+}
+
+@media (max-width: 1100px) {
+  .tarjeta-heroe {
+    margin: 25px 30px;
+    width: 38%;
+  }
+
+  /* img.perfil {
+    width: 45%;
+    left: 29%;
+    top: 26%;
+  }
+
+  .info-heroe {
+    padding-top: 100px;
+  }
+
+  .harley {
+    display: none;
+  } */
+}
+
+/* Para tabletas */
+@media (max-width: 780px) {
+  .cartas {
+    height: auto;
+  }
+  .tarjeta-heroe {
+    margin: 15px 25px;
+  }
+
+  img.perfil {
+    width: 50%;
+    left: 29%;
+    top: 15%;
+    
+  }
+}
+
+/* Para celulares grandes */
+@media (max-width: 650px) {
+  .tarjeta-heroe {
+    margin: 25px 0px;
+    width: 70%;
+  }
+
+  img.perfil {
+    width: 45%;
+    left: 29%;
+    top: 20%;
+  }
+
+  .info-heroe {
+    padding-top: 100px;
+  }
+
+  .harley {
+    display: none;
+  }
+
+  footer > img {
+    position: static;
+    margin: 10px;
+  }
+
+  footer {
+    text-align: center;
+    flex-direction: column;
   }
 }
 
@@ -194,7 +253,7 @@ footer > img {
   img.perfil {
     width: 45%;
     left: 29%;
-    top: 18%;
+    top: 25%;
   }
   .boton-mas-principal {
     right: 5px;
@@ -203,15 +262,27 @@ footer > img {
     z-index: 2;
     font-size: 1.2rem;
   }
-
-  footer > img {
-    position: static;
-    margin: 10px;
-  }
-  
 }
 
 /* Para celulares super pequeños */
+@media (max-width: 380px) {
+  .tarjeta-heroe {
+    margin: 25px 0px;
+    width: 100%;
+  }
+
+  .info-heroe {
+    padding-top: 70px;
+  }
+
+  img.perfil {
+    width: 45%;
+    left: 29%;
+    top: 16%;
+  }
+}
+
+/* Para celulares diminutos*/
 @media (max-width: 300px) {
   .tarjeta-heroe {
     margin: 25px 0px;
