@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  align-items: center;
+}
+.form-container {
+  width: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form button,
+form input,
+select,
+textarea {
+  width: 100%;
+  height: 40px;
+  margin: 10px;
+  padding-left: 10px;
+}
+
+textarea {
+  height: auto;
+}
+
+form .boton-resetear {
+  background: #888888;
+  color: white;
+  border: none;
+  height: auto;
+  padding: 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+form .boton-enviar {
+  background: #1cd1b0;
+  border: none;
+  height: auto;
+  padding: 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  text-align: center;
+}
+
+.form-container span {
+  color: #00669f;
+  margin-right: 5px;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: bold;
+  font-family: Inter, Roboto, sans-serif;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.boton-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .form-container {
+    width: 95%;
+    height: auto;
+  }
+
+  .form-container form input,
+  .form-container form button, .form-container textarea, .form-container select {
+    width: 90%;
+  }
+}

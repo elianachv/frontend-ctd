@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background-image: url("../img/fondo-harly2.png");
+  background-color: plum;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article.tarjeta-perfil {
+  width: 500px;
+  position: relative;
+  padding: 0;
+  border-radius: 30px;
+}
+
+img.perfil {
+  width: 120px;
+  position: absolute;
+  left: calc(50% - 60px);
+  top: -60px;
+  border-radius: 50%;
+}
+.info-heroe {
+  width: 100%;
+  background-color: white;
+  border-radius: 30px 30px 0 0;
+  margin: 0;
+ 
+}
+
+.info-heroe p {
+    font-size: 17px;
+  }
+  
+
+.info-heroe p::first-line {
+  color: #784cd6;
+  font-style: italic;
+}
+
+.boton-home {
+  background: #2c0187;
+  color: white;
+  width: 100%;
+  border-radius: 0 0 30px 30px;
+  border: none;
+  margin: 0;
+  padding: 15px 0px;
+}
+
+.boton-home a{
+    color: white;
+    text-decoration: none;
+}
+
+h3 {
+  color: #582faf;
+  text-decoration: underline;
+}
+
+h3::after {
+  content: ":";
+}
+
+.iconos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+    font-size: 40px;
+}
+.iconos i{
+    margin: 10px;
+}

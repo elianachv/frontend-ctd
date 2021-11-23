@@ -22,12 +22,34 @@ header {
 
 .titulo {
   background: #00669f;
-  padding: 28px 0px 26px 28px;
+  padding: 8px;
 }
 
 h1 {
-  font-weight: 400;
+  font-weight: 300;
 }
+
+.barra-menu{
+  background: #001D2D;
+  padding: 5px 15px;
+  font-size: 13px;
+
+}
+
+.barra-menu ul{
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.barra-menu ul li a{
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+
+
+}
+
 
 .boton-mas-principal {
   display: flex;
@@ -149,7 +171,7 @@ footer > img {
 }
 
 /**/
-@media (max-width: 1650px) {
+@media (max-width: 1450px) {
   .cartas {
     height: auto;
   }
