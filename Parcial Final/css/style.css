@@ -32,6 +32,7 @@ header nav span {
   display: none;
 }
 
+header nav > a:nth-of-type(1),
 header nav > a > img {
   width: 30px;
   display: none;
@@ -58,6 +59,32 @@ header nav li a:hover {
   color: #6879b8;
 }
 
+@keyframes boton {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+header button,
+.infoGeneral button {
+  transition: transform 0.5s;
+  animation: boton 0.5s 3;
+}
 button {
   color: white;
   background-color: #f3603b;
@@ -179,6 +206,10 @@ h3 {
   align-items: center;
   text-align: center;
   margin: 0 30px;
+}
+
+.testimonios > div > article:nth-child(4) {
+  display: none;
 }
 
 .testimonios > div > article img {
@@ -315,7 +346,12 @@ footer form input {
   border: none;
 }
 
-/* footer form input:invalid {
+/*
+  ¡Descomenta para visualizar!
+
+  VALIDACION FORMULARIO 
+
+  footer form input:invalid {
   border: red solid 3px;
   color: red;
 }
@@ -328,6 +364,85 @@ footer form div::after {
   margin-left: 15px;
   margin-top: 10px;
 } */
+
+@keyframes notificacion {
+  0% {
+    top: -100vh;
+  }
+
+  5% {
+  }
+
+  100% {
+    top: 0vh;
+  }
+}
+.notificacion {
+  position: absolute;
+  top: -100vh;
+  width: 100%;
+  height: 100vh;
+  background-color: #1e1e267e;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 2s;
+}
+
+.notificacion:target {
+  top: 0vh;
+}
+
+.notificacion span {
+  color: #232c50;
+  font-weight: 700;
+}
+.notificacion > div {
+  background-color: #facdc1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  height: auto;
+  border-radius: 30px;
+  opacity: 1;
+  position: relative;
+  padding: 50px;
+}
+
+.notificacion h3 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.notificacion p {
+  text-align: center;
+}
+
+span.nota {
+  color: red;
+}
+.notificacion img {
+  width: 80%;
+  object-fit: contain;
+  margin: 10px 10%;
+}
+.notificacion div > a > i {
+  font-size: 30px;
+  color: red;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.notificacion a {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+}
 
 footer > form > button {
   width: 63px;
@@ -347,18 +462,19 @@ footer > p {
 /* Tabletas */
 @media (max-width: 1024px) {
   header nav {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px;
-    position: relative;
- 
   }
 
   header nav span,
+  header nav > a:nth-of-type(1),
   header nav > a > img {
     display: block;
   }
 
+  header nav > a:nth-of-type(2),
   header nav button {
     display: none;
   }
@@ -503,7 +619,7 @@ footer > p {
     margin-bottom: 80px;
   }
 
-  /* footer {
+  footer {
     height: auto;
   }
 
@@ -521,7 +637,7 @@ footer > p {
     position: static;
     order: 1;
     text-align: center;
-  } */
+  }
 }
 
 /* Celulares */
@@ -811,6 +927,7 @@ footer > p {
   }
 
   .testimonios > div > article:nth-child(4) {
+    display: flex;
     animation: slider4 12s infinite;
   }
 
@@ -911,5 +1028,13 @@ footer > p {
     position: static;
     text-align: center;
     margin: 0;
+  }
+
+  .notificacion {
+    display: none;
+  }
+
+  .notificacion:target {
+    display: none;
   }
 }

@@ -95,4 +95,4 @@
   border-radius: 0 0 35% 35%;
   transform: rotate(55deg);
   z-index: -1;
-}
+}pol
