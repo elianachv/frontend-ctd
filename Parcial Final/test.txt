@@ -1,0 +1,98 @@
+ <div class="container">
+        <!-- testimonios div -->
+        <ul>
+          <!-- En cada li un article con el testimonio -->
+          <li id="slide1">slider 1</li>
+          <li id="slide2">slider 2</li>
+          <li id="slide3">slider 3</li>
+        </ul>
+        <ul>
+          <!-- puntitos -->
+          <li>
+            <a href="#slide1"><div>1</div></a>
+          </li>
+          <li>
+            <a href="#slide2"><div>2</div></a>
+          </li>
+          <li>
+            <a href="#slide3"><div>3</div></a>
+          </li>
+        </ul>
+      </div>
+
+
+/* TEST SLIDER */
+
+.container {
+  margin: 100px auto;
+  width: 80vw;
+  padding: 20px 165px;
+  background: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.container ul:nth-child(1) {
+  position: relative;
+  border: red 2px solid;
+  width: 50%;
+  height: 200px;
+}
+
+.container ul:nth-child(1) li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: inherit;
+  background-color: green;
+  transition: opacity 500ms;
+}
+
+.container ul:nth-child(1) li:first-child {
+  opacity: 1;
+}
+
+.container ul:nth-child(1) li:target {
+  opacity: 1;
+}
+.container ul:nth-child(2) > li a div {
+  width: 9px;
+  height: 9px;
+  border: #f3603b 2px solid;
+  border-radius: 50%;
+  margin: 0px 3px;
+}
+
+  body::after {
+    content: "";
+    width: 25vw;
+    height: 0;
+    background-color: #ffc9bc80;
+    position: absolute;
+    top: -10vh;
+    right: 0;
+    border-radius: 0 0 35% 35%;
+    transform: rotate(55deg);
+    z-index: -1;
+  }
+
+  body::after {
+  content: "";
+  width: 25vw;
+  height: 0;
+  background-color: #ffc9bc80;
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  border-radius: 0 0 35% 35%;
+  transform: rotate(55deg);
+  z-index: -1;
+}
