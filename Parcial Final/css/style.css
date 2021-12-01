@@ -124,6 +124,7 @@ button:hover {
   justify-content: space-evenly;
   padding: 0px 165px;
   margin-top: 50px;
+  position: relative;
 }
 h1,
 h2,
@@ -346,6 +347,22 @@ footer form input {
   border: none;
 }
 
+.sombra img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: contain;
+  z-index: -10;
+}
+
+.sombra2 img {
+  position: absolute;
+  object-fit: contain;
+  z-index: -10;
+  left: -300px;
+  bottom: -250px;
+}
+
 /*
   ¡Descomenta para visualizar!
 
@@ -380,7 +397,8 @@ footer form div::after {
 .notificacion {
   position: absolute;
   top: -100vh;
-  width: 100%;
+  left: 0;
+  width: 100vw;
   height: 100vh;
   background-color: #1e1e267e;
   opacity: 1;
@@ -461,6 +479,7 @@ footer > p {
 
 /* Tabletas */
 @media (max-width: 1024px) {
+
   header nav {
     display: flex;
     justify-content: space-between;
@@ -638,14 +657,37 @@ footer > p {
     order: 1;
     text-align: center;
   }
+
+  .sombra2 img{
+    width: 100vw;
+    height: 400px;
+    top: -300px;
+    left: 0px;
+    object-fit: cover;
+    object-position: -200px top;
+    display: inline-block;
+  }
+
+  .sombra img{
+    width: 100%;
+    height: 400px;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    object-position: 80% bottom;
+
+  }
+
+
 }
 
 /* Celulares */
 @media (max-width: 480px) {
   header {
     background-color: white;
-    position: sticky;
-    top: 0;
+    position: relative;
+    top: 0; 
+    z-index: -10;
   }
 
   header nav {
@@ -991,7 +1033,7 @@ footer > p {
 
   footer > div > div {
     display: flex;
-    width: 90vw;
+    width: 100%;
     justify-content: space-evenly;
   }
 
@@ -1000,7 +1042,6 @@ footer > p {
   }
 
   footer form {
-    width: 90vw;
     order: 1;
     align-self: auto;
     display: flex;
@@ -1008,7 +1049,6 @@ footer > p {
   }
 
   footer nav {
-    width: 90vw;
     order: 2;
     align-items: center;
     justify-content: space-around;
@@ -1037,4 +1077,26 @@ footer > p {
   .notificacion:target {
     display: none;
   }
+
+  .sombra2 img{
+    width: 100%;
+    transform: rotate(180deg);
+    height: 300px;
+    top: -150px;
+    left: 0px;
+    object-fit: cover;
+    object-position: 50% bottom;
+  }
+
+  .sombra img{
+    width: 100%;
+    height: 400px;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    object-position: 80% bottom;
+
+  }
+
+
 }
